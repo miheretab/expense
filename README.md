@@ -33,7 +33,7 @@ change the ff config into composer.json: add `"Modules\\": "Modules/"`
 ```
 
 Then copy the `Expenses` module files into the `Modules/Expenses` directory. The structure should look like this:
-Add modules_statuses.json into the root directory:
+Add `modules_statuses.json` into the root directory:
 ```json
 {
     "Expenses": true
@@ -77,6 +77,8 @@ To generate the docs
 ```bash
 php artisan scribe:generate
 ```
+
+You will get the generated docs in `/docs` link.
 
 ### 4. Run tests
 
