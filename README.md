@@ -23,7 +23,7 @@ This module provides a **self-contained Expenses feature** for a Laravel 12 appl
 
 Make sure your Laravel app supports module loading, via `composer require nwidart/laravel-modules`.
 
-change the ff config into composer.json: add `"Modules\\": "Modules/"`
+change the ff config into `composer.json`: add `"Modules\\": "Modules/"`
 ```json
     "autoload": {
         "psr-4": {
