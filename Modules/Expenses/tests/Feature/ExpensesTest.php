@@ -10,7 +10,7 @@ class ExpensesTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_can_create_and_fetch_expense()
+    public function test_can_create_expense()
     {
         $payload = [
             'title' => 'Test Expense',
@@ -25,7 +25,10 @@ class ExpensesTest extends TestCase
                  ->assertJsonFragment(['title' => 'Test Expense']);
 
         $this->assertDatabaseHas('expenses', ['title' => 'Test Expense']);
+    }
 
+    public function test_fetch_expense()
+    {
         $getResponse = $this->getJson('/api/expenses');
         $getResponse->assertStatus(200)->assertJsonStructure([['id', 'title']]);
     }
